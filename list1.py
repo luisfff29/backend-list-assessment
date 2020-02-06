@@ -25,9 +25,11 @@
 
 
 def match_ends(words):
-    """Your code goes here.  Edit this docstring."""
-    return
-
+    count = 0
+    for i in words:
+        if len(i) >= 2 and i[0] == i[-1]:
+            count += 1
+    return count
 
 # B. front_x
 # Given a list of strings, return a list with the strings
@@ -36,6 +38,8 @@ def match_ends(words):
 # ['xanadu', 'xyz', 'aardvark', 'apple', 'mix']
 # Hint: this can be done by making 2 lists and sorting each of them
 # before combining them.
+
+
 def front_x(words):
     """Your code goes here.  Edit this docstring."""
     return
