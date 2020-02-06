@@ -35,12 +35,17 @@ def remove_adjacent(nums):
 # The solution should work in "linear" time, making a single pass of both lists.
 # Hint: Don't use `sort` or `sorted` -- they are not linear time.
 def linear_merge(list1, list2):
-    """Your code goes here.  Edit this docstring."""
-    return
-
+    list = list1 + list2
+    new_list = []
+    for i in range(len(list)):
+        new_list.append(min(list))
+        list.remove(min(list))
+    return new_list
 
 # Simple provided test() function used in main() to print
 # what each function returns vs. what it's supposed to return.
+
+
 def test(got, expected):
     if got == expected:
         prefix = ' OK '
