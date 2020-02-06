@@ -41,8 +41,17 @@ def match_ends(words):
 
 
 def front_x(words):
-    """Your code goes here.  Edit this docstring."""
-    return
+    list_x = []
+    list = []
+    for i in words:
+        if i.startswith("x"):
+            list_x.append(i)
+        else:
+            list.append(i)
+    list_x.sort()
+    list.sort()
+    list_x.extend(list)
+    return list_x
 
 
 # C. sort_last
