@@ -42,15 +42,15 @@ def match_ends(words):
 
 def front_x(words):
     list_x = []
-    list = []
+    new_list = []
     for i in words:
         if i.startswith("x"):
             list_x.append(i)
         else:
-            list.append(i)
+            new_list.append(i)
     list_x.sort()
-    list.sort()
-    list_x.extend(list)
+    new_list.sort()
+    list_x.extend(new_list)
     return list_x
 
 
