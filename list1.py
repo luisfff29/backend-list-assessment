@@ -25,9 +25,11 @@
 
 
 def match_ends(words):
-    """Your code goes here.  Edit this docstring."""
-    return
-
+    count = 0
+    for i in words:
+        if len(i) >= 2 and i[0] == i[-1]:
+            count += 1
+    return count
 
 # B. front_x
 # Given a list of strings, return a list with the strings
@@ -36,9 +38,20 @@ def match_ends(words):
 # ['xanadu', 'xyz', 'aardvark', 'apple', 'mix']
 # Hint: this can be done by making 2 lists and sorting each of them
 # before combining them.
+
+
 def front_x(words):
-    """Your code goes here.  Edit this docstring."""
-    return
+    list_x = []
+    new_list = []
+    for i in words:
+        if i.startswith("x"):
+            list_x.append(i)
+        else:
+            new_list.append(i)
+    list_x.sort()
+    new_list.sort()
+    list_x.extend(new_list)
+    return list_x
 
 
 # C. sort_last
@@ -48,12 +61,16 @@ def front_x(words):
 # [(2, 2), (1, 3), (3, 4, 5), (1, 7)]
 # Hint: use a custom key= function to extract the last element form each tuple.
 def sort_last(tuples):
-    """Your code goes here.  Edit this docstring."""
-    return
+    def last(val):
+        return val[-1]
+    tuples.sort(key=last)
+    return tuples
 
 
 # Simple provided test() function used in main() to print
 # what each function returns vs. what it's supposed to return.
+
+
 def test(got, expected):
     if got == expected:
         prefix = ' OK '
